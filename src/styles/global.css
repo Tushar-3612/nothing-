@@ -1,0 +1,176 @@
+:root {
+  /* ===== Core palette (soft, warm, premium) ===== */
+  --cream: #fdf7f3;
+  --blush: #fbe6ee;
+  --rose: #f3a9c4;
+  --rose-deep: #dd7ba1;
+  --lilac: #cbb2ec;
+  --lavender: #efe7fb;
+  --peach: #fde6d6;
+  --gold: #ecc78a;
+  --plum: #463a44;
+  --plum-soft: #75606f;
+  --white: #ffffff;
+  --card: #fffdfb;
+
+  /* ===== Semantic tokens ===== */
+  --bg-gradient: radial-gradient(
+        1100px 760px at 12% -8%,
+        var(--blush) 0%,
+        transparent 55%
+      ),
+    radial-gradient(
+        900px 680px at 108% 6%,
+        var(--lavender) 0%,
+        transparent 52%
+      ),
+    linear-gradient(165deg, var(--cream) 0%, #fbeef3 55%, #f3eafb 100%);
+
+  --bg-glow: radial-gradient(
+    62vw 50vw at 50% 0%,
+    rgba(255, 255, 255, 0.65),
+    transparent 70%
+  );
+
+  --text: var(--plum);
+  --text-soft: var(--plum-soft);
+  --accent: var(--rose-deep);
+  --accent-soft: var(--rose);
+
+  /* ===== Typography ===== */
+  --font-display: "Playfair Display", "Cormorant Garamond", "Georgia", serif;
+  --font-body: "Quicksand", "Nunito", system-ui, sans-serif;
+  --font-hand: "Caveat", "Comic Sans MS", cursive;
+  --font-script: "Dancing Script", "Caveat", cursive;
+
+  /* ===== Surfaces ===== */
+  --card-bg: var(--card);
+  --card-border: rgba(70, 58, 68, 0.07);
+  --card-shadow: 0 24px 60px -32px rgba(70, 58, 68, 0.32);
+
+  /* ===== Effects ===== */
+  --shadow-soft: 0 18px 44px -24px rgba(70, 58, 68, 0.3);
+  --shadow-float: 0 20px 50px -26px rgba(221, 123, 161, 0.4);
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-card: 26px;
+  --radius-lg: 34px;
+  --radius-pill: 999px;
+
+  /* ===== Motion ===== */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.34em;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.lede {
+  color: var(--text-soft);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--rose);
+  color: var(--white);
+}
+
+/* Utility */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: clamp(1.1rem, 5vw, 2.5rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .progress-label {
+    display: none;
+  }
+}
