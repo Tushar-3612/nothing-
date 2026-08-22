@@ -20,7 +20,7 @@ export const config = {
   intro: {
    greeting: "Hey {name} 🎀",
 line: "Today is all about you — so I saved a little something to make your day a little brighter. ✨",
-cta: "Open Your Surprise →"}
+cta: "Open What i made For u →"}
 , 
 
   colors: {
