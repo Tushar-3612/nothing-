@@ -145,7 +145,7 @@ export const gifts = [
     links: [
       {
         label: "Course Option 01 →",
-        url: "https://www.udemy.com/share/109ExE3@GhG9DkLft6bno_W7x23lqQG_Jbq6a0MJxOyQCDRmf89A99LYcNcmF2wd1hPtfnaI3g==/",
+        url: "https://elearn.interviewgig.com/free-online-courses-coupons/",
       },
       {
         label: "Course Option 02 →",
